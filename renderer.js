@@ -12,18 +12,18 @@ const temperature = document.getElementById("temperature");
 
 function checkWeather() {
   console.log("开始更新天气");
-  ipcRenderer.send('renderer-request-update-weather');
+  ipcRenderer.send("renderer-request-update-weather");
 }
 
 // 监听主进程返回的天气数据
-ipcRenderer.on('response-from-main-weather', (event, weatherData) => {
+ipcRenderer.on("response-from-main-weather", (event, weatherData) => {
   if (weatherData.error) {
     city.textContent = "获取天气数据失败";
     weather.textContent = "错误";
     temperature.textContent = "错误";
   } else {
-    weatherData=weatherData["results"][0]
-    console.info(weatherData)
+    weatherData = weatherData["results"][0];
+    console.info(weatherData);
     city.textContent = weatherData.location.name;
     weather.textContent = weatherData.now.text;
     weatherImage.src = `./white/${weatherData.now.code}.png`;
