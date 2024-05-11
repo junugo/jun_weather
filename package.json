@@ -1,0 +1,16 @@
+{
+  "name": "jun-weather",
+  "productName": "jun-weather",
+  "description": "郡气：一个轻量简易的天气应用，用于Electron 编程学习",
+  "keywords": [],
+  "main": "./main.js",
+  "version": "1.0.0",
+  "author": "JUNU",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "31.0.0-alpha.4"
+  },
+  "license": "ISC"
+}
