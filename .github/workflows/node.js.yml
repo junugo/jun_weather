@@ -9,7 +9,7 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-20.04
+    runs-on: windows-2022
 
     strategy:
       matrix:
@@ -39,12 +39,14 @@ jobs:
     - name: Create and Push Git Tag
       if: success()  # 仅在打包成功时执行
       run: |
-        # 使用当前日期和时间生成标签
-        TAG_DATE=$(date -u +'%Y%m%d%H%M%S')
+        # 使用 PowerShell 获取当前日期和时间
+        $TAG_DATE = Get-Date -Format "yyyyMMddHHmmss"
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
+        # 为标签使用当前日期和时间
         git tag -a "release-$TAG_DATE" -m "Automatic release tagged at $TAG_DATE"
         git push origin "release-$TAG_DATE"
+      shell: pwsh  # 指定使用 PowerShell
 
     # 步骤3: 发布到 GitHub Releases
     - name: Publish to GitHub Releases
