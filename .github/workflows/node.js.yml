@@ -27,19 +27,17 @@ jobs:
     # 下方为我的工作流
     # 步骤1: 打包Electron应用程序
     - name: Install Electron Packager
-      run: npm install electron-packager --save-dev
+      run: npm install electron-builder --save-dev
 
     - name: Package Electron App
-      run: npx electron-packager . --overwrite --platform=win32 --arch=x64 --out=release-builds
+      run: npx electron-builder
 
     # 步骤2: 上传构建产物
     - name: Upload Artifact
       uses: actions/upload-artifact@v3
       with:
         name: electron-app
-        path: |
-          dist/
-          !**/*.js.map  # 排除源映射文件
+        path: dist/*.*
 
     # 步骤3: 发布到GitHub Releases
     - name: Release
