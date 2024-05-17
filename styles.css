@@ -54,3 +54,10 @@ body {
     margin-left: 20px;
     margin-bottom: 50px;
 }
+
+#date {
+    font-size: 3.5vw;
+    margin-left: 20px;
+    margin-bottom: 50px;
+    cursor: pointer;
+}
