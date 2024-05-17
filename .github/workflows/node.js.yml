@@ -29,8 +29,10 @@ jobs:
     - name: Install Electron Packager
       run: npm install electron-builder --save-dev
 
-    - name: Package Electron App
-      run: npx electron-builder
+    - name: Publish to GitHub Releases
+      env:
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      run: npx electron-builder --publish always
 
     # 步骤2: 上传构建产物
     - name: Upload Artifact
