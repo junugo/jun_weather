@@ -1,0 +1,49 @@
+name: Node.js CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x, 16.x, 18.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    - run: npm ci
+    # 下方为我的工作流
+    - run: npm test
+    # 步骤1: 打包Electron应用程序
+    - name: Package Electron App
+      run: npm run package
+
+    # 步骤2: 上传构建产物
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: electron-app
+        path: |
+          dist/
+          !**/*.js.map  # 排除源映射文件
+
+    # 步骤3: 发布到GitHub Releases
+    - name: Release
+      if: startsWith(github.ref, 'refs/tags/')
+      uses: softprops/action-gh-release@v1
+      with:
+        files: dist/*.*
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
