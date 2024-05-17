@@ -9,7 +9,7 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: windows-2022
 
     strategy:
       matrix:
@@ -23,21 +23,21 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm cici
+    - run: npm ci
     # 下方为我的工作流
-    - run: npm test
     # 步骤1: 打包Electron应用程序
+    - name: Install Electron Packager
+      run: npm install electron-builder --save-dev
+
     - name: Package Electron App
-      run: npm run package
+      run: npx electron-builder
 
     # 步骤2: 上传构建产物
     - name: Upload Artifact
       uses: actions/upload-artifact@v3
       with:
         name: electron-app
-        path: |
-          dist/
-          !**/*.js.map  # 排除源映射文件
+        path: dist/*.*
 
     # 步骤3: 发布到GitHub Releases
     - name: Release
