@@ -45,7 +45,7 @@ jobs:
         git config --local user.name "GitHub Action"
         # 为标签使用当前日期和时间
         git tag -a "release-$TAG_DATE" -m "Automatic release tagged at $TAG_DATE"
-        git push origin "release-$TAG_DATE"
+        git push main "release-$TAG_DATE"
       shell: pwsh  # 指定使用 PowerShell
 
     # 步骤3: 发布到 GitHub Releases
