@@ -16,6 +16,8 @@
 - 点击日期可切换显示的天气日期（标题菜单也提供了日期选项）
 
 # Install and Develop - 安装与开发
+您可以直接安装我们的 [编译版本](https://github.com/junugo/jun_weather/releases) ，或者使用代码编译
+
 - 拉取代码
 ```
 git clone https://github.com/junugo/jun_weather.git

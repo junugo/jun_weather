@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="512mm"
+   height="512mm"
+   viewBox="0 0 512 512"
+   version="1.1"
+   id="svg148"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="icon.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview150"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.25764063"
+     inkscape:cx="355.14585"
+     inkscape:cy="1007.2169"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs145">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient1089">
+      <stop
+         style="stop-color:#a3a3a3;stop-opacity:1;"
+         offset="0"
+         id="stop1085" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:0;"
+         offset="1"
+         id="stop1087" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient966">
+      <stop
+         style="stop-color:#a3a3a3;stop-opacity:1;"
+         offset="0.5"
+         id="stop962" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:0;"
+         offset="1"
+         id="stop964" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient966"
+       id="linearGradient968"
+       x1="272.14102"
+       y1="130.4223"
+       x2="271.11407"
+       y2="185.87746"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.142864,0,0,2.142864,-270.97489,-144.30525)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1089"
+       id="linearGradient1091"
+       x1="107.45506"
+       y1="313.18102"
+       x2="236.38809"
+       y2="313.18102"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.0894619,0,0,2.0894619,-1.8259594,-287.28406)" />
+  </defs>
+  <g
+     inkscape:label="图层 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:283.484px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold Italic';fill:url(#linearGradient968);fill-opacity:1;stroke:none;stroke-width:2.63358;stroke-dasharray:none;stroke-opacity:1"
+       x="19.505405"
+       y="231.99881"
+       id="text323"><tspan
+         sodipodi:role="line"
+         id="tspan321"
+         style="font-size:283.484px;fill:url(#linearGradient968);fill-opacity:1;stroke-width:2.63358"
+         x="19.505405"
+         y="231.99881">郡</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:276.419px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold Italic';fill:url(#linearGradient1091);fill-opacity:1;stroke:none;stroke-width:2.56794;stroke-dasharray:none;stroke-opacity:1"
+       x="219.18811"
+       y="463.73447"
+       id="text1070"><tspan
+         sodipodi:role="line"
+         id="tspan1068"
+         style="fill:url(#linearGradient1091);fill-opacity:1;stroke-width:2.56794"
+         x="219.18811"
+         y="463.73447">气</tspan></text>
+  </g>
+</svg>

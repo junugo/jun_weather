@@ -10,7 +10,23 @@
     "start": "electron ."
   },
   "devDependencies": {
-    "electron": "^31.0.0-alpha.4"
+    "electron": "^31.0.0-alpha.4",
+    "electron-builder": "^24.13.3"
   },
-  "license": "MIT"
+  "homepage": "https://github.com/junugo/jun_weather",
+  "license": "MIT",
+  "build": {
+    "appId": "com.junu.jun_weather",
+    "mac": {
+      "category": "public.app-category.weather"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "icon.ico"
+    },
+    "linux": {
+      "target": "deb",
+      "icon": "/icons/"
+    }
+  }
 }
