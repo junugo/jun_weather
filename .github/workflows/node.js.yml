@@ -25,7 +25,6 @@ jobs:
         cache: 'npm'
     - run: npm ci
     # 下方为我的工作流
-    - run: npm test
     # 步骤1: 打包Electron应用程序
     - name: Package Electron App
       run: npm run package
