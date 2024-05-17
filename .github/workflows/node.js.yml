@@ -33,7 +33,7 @@ jobs:
       env:
         GH_TOKEN : ${{secrets.GITHUB_TOKEN}}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: npx electron-builder --public always
+      run: npx electron-builder --publish always --x64
       
     # 步骤2: 创建并推送 Git 标签
     - name: Create and Push Git Tag
@@ -45,7 +45,7 @@ jobs:
         git config --local user.name "GitHub Action"
         # 为标签使用当前日期和时间
         git tag -a "release-$TAG_DATE" -m "Automatic release tagged at $TAG_DATE"
-        git push https://x-access-token:$env:GITHUB_TOKEN@github.com/$env:GITHUB_REPOSITORY.git "$env:TAG_NAME"
+        git push https://github.com/junugo/jun_weather.git "$env:TAG_NAME"
       shell: pwsh  # 指定使用 PowerShell
 
     # 步骤3: 发布到 GitHub Releases
