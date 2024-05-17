@@ -33,7 +33,7 @@ jobs:
       env:
         GH_TOKEN : ${{secrets.GITHUB_TOKEN}}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: npx electron-builder
+      run: npx electron-builder --public always
       
     # 步骤2: 创建并推送 Git 标签
     - name: Create and Push Git Tag
