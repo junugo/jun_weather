@@ -26,8 +26,11 @@ jobs:
     - run: npm ci
     # 下方为我的工作流
     # 步骤1: 打包Electron应用程序
+    - name: Install Electron Packager
+      run: npm install electron-packager --save-dev
+
     - name: Package Electron App
-      run: npm run package
+      run: npx electron-packager . --overwrite --platform=win32 --arch=x64 --out=release-builds
 
     # 步骤2: 上传构建产物
     - name: Upload Artifact
