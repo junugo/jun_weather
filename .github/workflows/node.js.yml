@@ -32,7 +32,7 @@ jobs:
     - name: Publish to GitHub Releases
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: npx electron-builder --publish always
+      run: npx electron-builder
 
     # 步骤2: 上传构建产物
     - name: Upload Artifact
