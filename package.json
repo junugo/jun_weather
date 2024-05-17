@@ -18,15 +18,18 @@
   "build": {
     "appId": "com.junu.jun_weather",
     "mac": {
-      "category": "public.app-category.weather"
+      "category": "public.app-category.weather",
+      "publish": ["github"]
     },
     "win": {
       "target": "nsis",
-      "icon": "icon.ico"
+      "icon": "icon.ico",
+      "publish": ["github"]
     },
     "linux": {
       "target": "deb",
-      "icon": "/icons/"
+      "icon": "/icons/",
+      "publish": ["github"]
     }
   }
 }
