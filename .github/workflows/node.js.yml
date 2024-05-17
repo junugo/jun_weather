@@ -25,7 +25,7 @@ jobs:
         cache: 'npm'
     - run: npm ci
     # 下方为我的工作流
-    # 步骤1: 打包Electron应用程序
+    # 步骤1: 打包 Electron 应用程序
     - name: Install Electron Packager
       run: npm install electron-builder --save-dev
 
@@ -34,18 +34,23 @@ jobs:
         GH_TOKEN : ${{secrets.GITHUB_TOKEN}}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: npx electron-builder
+      
+    # 步骤2: 创建并推送 Git 标签
+    - name: Create and Push Git Tag
+      if: success()  # 仅在打包成功时执行
+      run: |
+        # 使用当前日期和时间生成标签
+        TAG_DATE=$(date -u +'%Y%m%d%H%M%S')
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git tag -a "release-$TAG_DATE" -m "Automatic release tagged at $TAG_DATE"
+        git push origin "release-$TAG_DATE"
 
-    # 步骤2: 上传构建产物
-    - name: Upload Artifact
-      uses: actions/upload-artifact@v3
-      with:
-        name: electron-app
-        path: dist/*.*
-
-    # 步骤3: 发布到GitHub Releases
-    - name: Release
+    # 步骤3: 发布到 GitHub Releases
+    - name: Publish to GitHub Releases
+      if: success()  # 仅在打包和标签成功时执行
       uses: softprops/action-gh-release@v1
       with:
-        files: dist/*.*
+        files: dist/***
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
