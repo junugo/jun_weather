@@ -3,8 +3,6 @@ name: Node.js CI
 on:
   push:
     branches: [ "main" ]
-    tags:
-      - '*' # 匹配所有tags
   pull_request:
     branches: [ "main" ]
 
