@@ -15,6 +15,10 @@
   },
   "homepage": "https://github.com/junugo/jun_weather",
   "license": "MIT",
+  "author": {
+    "name": "JUNU",
+    "email": "junugo@foxmail.com"
+  }
   "build": {
     "appId": "com.junu.jun_weather",
     "mac": {
