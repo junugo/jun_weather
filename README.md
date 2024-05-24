@@ -8,6 +8,8 @@
 
 当然，非常欢迎您参加到这款软件的开发中，如果您有好的想法，欢迎提交 Pull Request
 
+我的 Github Actions 貌似不太正确，目前不能正常发布版本（悲）
+
 ~~莫吐槽我的垃圾代码~~
 
 # function - 功能
@@ -15,8 +17,15 @@
 - 点击天气图标可切换日夜模式
 - 点击日期可切换显示的天气日期（标题菜单也提供了日期选项）
 
+# reference - 相关资料
+- [Electron](https://www.electronjs.org/)
+- [Electron-builder](https://www.electron.build/)
+- [Node.js](https://nodejs.org/) tip:这个好像没啥用
+
 # Install and Develop - 安装与开发
 您可以直接安装我们的 [编译版本](https://github.com/junugo/jun_weather/releases) ，或者使用代码编译
+
+我们使用 `electron-builder` 进行打包，如果您熟悉相关流程，可以直接使用 `electron-builder` 进行打包
 
 - 拉取代码
 ```
