@@ -18,7 +18,7 @@
   "author": {
     "name": "JUNU",
     "email": "junugo@foxmail.com"
-  }
+  },
   "build": {
     "appId": "com.junu.jun_weather",
     "mac": {
